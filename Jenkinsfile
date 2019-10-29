@@ -1,11 +1,8 @@
-pipeline {
-  agent any
-  stages {
-    stage('build') {
-      steps {
-        sh 'echo Building ${BRANCH_NAME}...'
-      }
-    }
-  }
-}
+#!/usr/bin/env groovy
 
+@Library('sharedcode')_
+
+myPipe(
+    projectConfigs: ["Release"],
+    testDlls: ["Test/bin/Release/SpaceApe.Containers.Test.dll"]
+    )
