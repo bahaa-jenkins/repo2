@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 @Library('sharedcode')_
 
 myPipe(
